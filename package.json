@@ -2,7 +2,7 @@
   "name": "query-url",
   "version": "1.0.0",
   "description": "Get search query from url",
-  "main": "index.js",
+  "main": "queryurl.js",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha"
   },
