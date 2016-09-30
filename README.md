@@ -1,2 +1,2 @@
 # query-url
-Get search query from url
+Get search query (job name and location) from url
