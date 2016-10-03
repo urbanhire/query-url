@@ -25,4 +25,14 @@ describe('Query Url', () => {
     assert.equal(query.q, 'programmer')
     done()
   })
+  it('/q-designer-l-jakarta-jobs', (done) => {
+    var query = queryUrl.getKeywordFromUrl({
+      url: '/q-designer-l-jakarta-jobs'
+    })
+    should.exist(query.q)
+    assert.equal(query.q, 'designer')
+    should.exist(query.location)
+    assert.equal(query.location, 'jakarta')    
+    done()
+  })
 })
