@@ -3,7 +3,7 @@ const _ = require('lodash')
 
 exports.getKeywordFromUrl = (params) => {
   var wordPath = _.result(params, 'url').replace(/\//g, '')
-  var stopWords = (!_.isEmpty(_.result(params, 'stopWords'))) ? params.stopWords : ['lowongan', 'kerja', 'kota', 'jobs', 'job', 'and', 'or', 'provinsi', 'wilayah']
+  var stopWords = (!_.isEmpty(_.result(params, 'stopWords'))) ? params.stopWords : ['q', 'l', 'jobs', 'lowongan', 'kerja', 'kota', 'jobs', 'job', 'and', 'or', 'provinsi', 'wilayah']
   // Splitting location and job query
   var splitter = (!_.isEmpty(_.result(params, 'splitter'))) ? params.splitter : ['-di-', '-in-']
 
