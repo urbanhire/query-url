@@ -5,7 +5,7 @@ exports.getKeywordFromUrl = (params) => {
   var wordPath = _.result(params, 'url').replace(/\//g, '')
   var stopWords = (!_.isEmpty(_.result(params, 'stopWords'))) ? params.stopWords : ['q', 'l', 'jobs', 'lowongan', 'kerja', 'kota', 'jobs', 'job', 'and', 'or', 'provinsi', 'wilayah']
   // Splitting location and job query
-  var splitter = (!_.isEmpty(_.result(params, 'splitter'))) ? params.splitter : ['-di-', '-in-', '-l-']
+  var splitter = (!_.isEmpty(_.result(params, 'splitter'))) ? params.splitter : ['-di-', '-in-', '-l-', 'l-']
 
   for (var i = 0; i < splitter.length; i++) {
     if (_.result(params, 'url').indexOf(splitter[i]) >= 0) {
