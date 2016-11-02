@@ -16,6 +16,16 @@ describe('Query Url', () => {
     assert.equal(query.location, 'jakarta barat')            
   	done()
   })
+  it('/lowongan-kerja-software-engineer-di', (done) => {
+    var query = queryUrl.getKeywordFromUrl({
+      url: '/lowongan-kerja-software-engineer-di'
+    })
+    should.exist(query.q)
+    should.exist(query.location)
+    assert.equal(query.q, 'software engineer')
+    assert.equal(query.location, '')
+    done()
+  })
   it('/lowongan-kerja-programmer', (done) => {
     var query = queryUrl.getKeywordFromUrl({
       url: '/lowongan-kerja-programmer'
